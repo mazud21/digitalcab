@@ -15,7 +15,7 @@ class _ContinueState extends State<Continue> {
       body: Container(
         child: Column(
           children: [
-            Image.asset('assets/2.png'),
+            Image.asset('assets/images/2.png'),
             Spacer(),
             Container(
               child: Column(children: [

@@ -60,7 +60,7 @@ class SplashScreenPageState extends State<SplashScreen>{
       backgroundColor: Color.fromRGBO(255, 51, 51, 25),
       body: Center(
         child: Image.asset(
-          "assets/1.png",
+          "assets/images/1.png",
           width: double.infinity,
           height: 200,
         ),
