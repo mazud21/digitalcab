@@ -1,0 +1,466 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class Home extends StatefulWidget {
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  BSPengajuan() {
+    showModalBottomSheet(
+        context: context,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(16.0),
+            topLeft: Radius.circular(16.0),
+          ),
+        ),
+        isScrollControlled: true, // set this to true
+        builder: (context) => StatefulBuilder(
+          builder: (BuildContext context, StateSetter state) {
+            return DraggableScrollableSheet(
+              expand: false,
+              builder: (context, controller) {
+                return SingleChildScrollView(
+                  controller: controller,
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Center(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                                  color: Colors.black26,
+                                ),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Search Destination',
+                                    hintStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                    prefixIcon: Icon(Icons.search, color: Colors.orange,),
+                                    focusedBorder: InputBorder.none,
+                                    enabledBorder: InputBorder.none,
+                                    errorBorder: InputBorder.none,
+                                    disabledBorder: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            ListTile(
+                              leading: Icon(Icons.location_pin, color: Colors.orange,),
+                              title: Text('Kajamalai Bustop, Tiruchiappali...'),
+                            ),
+                            ListTile(
+                              leading: Icon(Icons.location_pin, color: Colors.orange,),
+                              title: Text('M.G.R Bus stand(Mattuthavani...'),
+                            ),
+                            ListTile(
+                              leading: Icon(Icons.location_pin, color: Colors.orange,),
+                              title: Text('Tiruchiappali Central Bus Stand...'),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Stack(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Got a friend's referral code ?",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 16,
+                                    ),
+                                    Text(
+                                      "Apply before 07 Aug or before your first ride",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black54,),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "Apply Now",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.030, color: Colors.blue, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(CupertinoIcons.folder, size: 148,),
+                                )
+                              ],
+                            )
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Stack(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Invite your friends to try Digital Cab",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "Share invite code",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.030, color: Colors.blue, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(CupertinoIcons.folder, size: 120,),
+                                ),
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Container(
+                                    height: 50,
+                                    width: 100,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      color: Colors.black26,
+                                    ),
+                                    child: Center(
+                                      child: Text('WNXBYQU', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Stack(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Secure Your Digital Cab Account!",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 16,
+                                    ),
+                                    Text(
+                                      "Adding an email ID and a password will help in keeping your account secure",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black54,),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "Secure Account",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.030, color: Colors.blue, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(CupertinoIcons.folder, size: 148,),
+                                )
+                              ],
+                            )
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Stack(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Setup a payment mode for your rides",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "Setup Payment",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.030, color: Colors.blue, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(CupertinoIcons.folder, size: 148,),
+                                )
+                              ],
+                            )
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Stack(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Enjoying the new Digital Cab App?",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    Expanded(
+                                        child: Align(
+                                          child: Row(
+                                            children: [
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Colors.white,
+                                                  ),
+                                                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                  color: Colors.white,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black.withOpacity(0.1),
+                                                      spreadRadius: 2,
+                                                      blurRadius: 16,
+                                                      offset: Offset(0, 1), // changes position of shadow
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Row(
+                                                  children: [
+                                                    Icon(Icons.thumb_down_alt_rounded, color: Colors.red,),
+                                                    Text('No', style: TextStyle(color: Colors.black, fontSize: 16),)
+                                                  ],
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 16,
+                                              ),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Colors.white,
+                                                  ),
+                                                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                  color: Colors.white,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black.withOpacity(0.1),
+                                                      spreadRadius: 2,
+                                                      blurRadius: 16,
+                                                      offset: Offset(0, 1), // changes position of shadow
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Row(
+                                                  children: [
+                                                    Icon(Icons.thumb_up_alt_rounded, color: Colors.green,),
+                                                    Text('Yes', style: TextStyle(color: Colors.black, fontSize: 16),)
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                    )
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(CupertinoIcons.folder, size: 148,),
+                                )
+                              ],
+                            )
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        margin: EdgeInsets.all(16),
+                        height: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 16,
+                              offset: Offset(0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Stack(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Experience the all-new app it's faster, smarter & better",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.025, color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "Give Feedback",
+                                      style: TextStyle(fontSize: MediaQuery.of(context).size.height * 0.030, color: Colors.blue, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(CupertinoIcons.folder, size: 148,),
+                                )
+                              ],
+                            )
+                        ),
+                      ),
+                    ],
+                  )
+                );
+              },
+            );
+          },
+        ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: InkWell(
+          onTap: () => BSPengajuan(),
+          child: Text('Test BS'),
+        ),
+      ),
+    );
+  }
+}
