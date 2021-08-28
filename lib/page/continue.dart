@@ -13,77 +13,67 @@ class _ContinueState extends State<Continue> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.only(bottom: 16),
         child: Column(
           children: [
             Image.asset('assets/images/2.png'),
             Spacer(),
             Container(
               child: Column(children: [
-                Text(
+                Padding(padding: EdgeInsets.all(20), child: Text(
                   'Explore new way to travel with Digital Cab',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 28,
                       color: Colors.black),
-                ),
+                ),),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.3,
+                  //width: MediaQuery.of(context).size.width * 0.3,
                   padding: EdgeInsets.all(12),
                   margin: EdgeInsets.fromLTRB(16, 0, 16, 8),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Colors.blue,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.blueAccent.withOpacity(0.1),
-                        spreadRadius: 2,
-                        blurRadius: 16,
-                        offset: Offset(0, 1), // changes position of shadow
-                      ),
-                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.black,
+
                   ),
                   child: Align(
                       alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(Icons.gps_fixed, color: Colors.white),
-                          SizedBox(width: 10),
-                          Text(
-                            "Lokasi",
-                            style: TextStyle(
-                                fontSize:
-                                MediaQuery.of(context).size.height *
-                                    0.025,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      )),
+                      child: Text(
+                        "Continue with Phone Number",
+                        style: TextStyle(
+                            fontSize:
+                            MediaQuery.of(context).size.height *
+                                0.025,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      )
+                  ),
                 )
               ]),
+            ),
+            SizedBox(
+              height: 16,
             ),
             Row(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.3,
+                  width: MediaQuery.of(context).size.width * 0.4,
                   padding: EdgeInsets.all(12),
                   margin: EdgeInsets.fromLTRB(16, 0, 16, 8),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.white,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.blueAccent.withOpacity(0.1),
-                        spreadRadius: 2,
-                        blurRadius: 16,
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 1,
+                        blurRadius: 8,
                         offset: Offset(0, 1), // changes position of shadow
                       ),
                     ],
@@ -102,28 +92,29 @@ class _ContinueState extends State<Continue> {
                                 fontSize:
                                 MediaQuery.of(context).size.height *
                                     0.025,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
-                      )),
+                      )
+                  ),
                 ),
                 Spacer(),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.3,
+                  width: MediaQuery.of(context).size.width * 0.4,
                   padding: EdgeInsets.all(12),
                   margin: EdgeInsets.fromLTRB(16, 0, 16, 8),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.white,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.blueAccent.withOpacity(0.1),
-                        spreadRadius: 2,
-                        blurRadius: 16,
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 1,
+                        blurRadius: 8,
                         offset: Offset(0, 1), // changes position of shadow
                       ),
                     ],
@@ -142,12 +133,13 @@ class _ContinueState extends State<Continue> {
                                 fontSize:
                                 MediaQuery.of(context).size.height *
                                     0.025,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
-                      )),
-                )
+                      )
+                  ),
+                ),
               ],
             )
           ],

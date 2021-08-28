@@ -57,7 +57,7 @@ class SplashScreenPageState extends State<SplashScreen>{
 
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color.fromRGBO(255, 51, 51, 25),
+      backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(
           "assets/images/1.png",
