@@ -33,8 +33,14 @@ class _RateUsState extends State<RateUs> {
                 Center(
                   child: Image.asset('assets/images/1.png', width: 200,),
                 ),
+                SizedBox(
+                  height: 16,
+                ),
                 Center(
-                  child: Text('How Would You Rate Our App Experience?', style: TextStyle(fontSize: 24, color: Colors.black),),
+                  child: Text('How Would You \nRate Our App Experience?', style: TextStyle(fontSize: 24, color: Colors.grey),textAlign: TextAlign.center,),
+                ),
+                SizedBox(
+                  height: 16,
                 ),
                 Center(
                   child: Row(
@@ -60,9 +66,10 @@ class _RateUsState extends State<RateUs> {
             ),
           ),
           Positioned(
-            bottom: 18,
+            bottom: 0,
             child: Container(
               width: MediaQuery.of(context).size.width * 1,
+              height: 60,
               padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
               color: Colors.black,
               child: Align(
@@ -79,7 +86,7 @@ class _RateUsState extends State<RateUs> {
           Positioned(
             bottom: 18,
             child: Visibility(
-              visible: false,
+              visible: true,
               child: Container(
                 width: MediaQuery.of(context).size.width * 1,
                 padding: EdgeInsets.all(8),

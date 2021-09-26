@@ -263,13 +263,13 @@ class _EnterPhoneNumberState extends State<EnterPhoneNumber> {
   }
 }
 
-class PleaseWait extends StatefulWidget {
+class Otp extends StatefulWidget {
 
   @override
-  _PleaseWaitState createState() => _PleaseWaitState();
+  _OtpState createState() => _OtpState();
 }
 
-class _PleaseWaitState extends State<PleaseWait> {
+class _OtpState extends State<Otp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

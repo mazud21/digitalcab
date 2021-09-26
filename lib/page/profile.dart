@@ -523,7 +523,7 @@ class _UpdateNumberState extends State<UpdateNumber> {
           Positioned(
             bottom: 18,
             child: Visibility(
-              visible: true,
+              visible: false,
               child: Container(
                 width: MediaQuery.of(context).size.width * 1,
                 padding: EdgeInsets.all(8),
